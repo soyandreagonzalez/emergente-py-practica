@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <element onload="myfunction_onload">
+    <button type="submit" onclick="myfunction_clickevent()">Ejecutar ventana</button>
+    <script type="text/javascript" src=""></script>
+
+    <script>
+        function myfunction_onload(){
+            $.ajax({
+                url: "app.py",
+                context: document.body
+            })
+    }    
+    </script>
+    
+    <script>
+        function myfunction_clickevent(){
+            $.ajax({
+                url: "/test",
+                context: document.body
+            })
+        ;}
+    </script>
+</body>
+</html>
